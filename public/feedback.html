@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
+body {
+  background-color: black;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+form {
+  padding-left:25px;
+  padding-right:25px;
+  padding-top:60px;
+  margin: 12px auto;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position:relative;
+  z-index:1;
+}
+
+form > div{
+  position:absolute;
+  top:0;
+  left:50%;
+  padding:0 20px;
+  transform:translate(-50%,-50%);
+  background-color:black;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align:center;
+}
+
+form > div > img{
+  filter:invert(1);
+  width:100px;
+}
+
+form > input,
+form > textarea {
+  padding: 12px;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  color: #ddd;
+  background-color: #222;
+  border-radius: 4px;
+  display: block;
+  width: 70vw;
+}
+
+form > textarea{
+  height:100px;
+  resize:none;
+}
+
+form > input[type="submit"] {
+  max-width: 20vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+form > input[type="submit"]:hover {
+  background-color: #555;
+}
+
+    </style>
+</head>
+<body>
+
+    <form action="/feed" method="post">
+  <div>
+  <img src="https://cdn4.iconfinder.com/data/icons/basic-user-interface-elements/700/mail-letter-offer-256.png" alt="icon">
+   </div>
+   <label for="name"><b>Name</b></label>
+   <input type="name" placeholder="Name" name="name" id="name" required>
+   <label for="area"><b>Area</b></label>
+   <input type="area" placeholder="Area" name="area" id="area" required>
+   <label for="rating"><b>Rating</b></label>
+   <input type="rating" placeholder="Rating (out of 5)" name="rating" id="rating" required>
+   <label for="feedback"><b>feedback</b></label>
+
+   <!-- <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+  <input type="text" placeholder="Name" required>
+  <input type="text" placeholder="area" required>
+  <input type="text" placeholder="Rating (out of 5)" required> -->
+  <textarea placeholder="feedback"  name="feedback" id="feedback"required></textarea>
+
+  <input type="submit" value="Send" id="submit"/>
+
+</form>
+</body>
+</html>

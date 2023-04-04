@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+body{
+    background-image: linear-gradient(90deg, rgba(25,30,30,0.15828843744529064) 0%, rgba(27,29,29,0.6316777931875875) 100%), url('logo1.png');
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    height: 130px;
+    background-position:0%;
+    background-size:100%;
+    position: relative;
+  font-size: 20px;
+}
+
+  .container {
+  padding: 40px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #130b0ba9;
+  font-size: 17px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #130b0ba9;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 2px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #8aeadab6;
+  color: rgb(16, 14, 14);
+  padding: 16px 20px;
+  margin: 8px 500px;
+  border: none;
+  cursor: pointer;
+  width: 20%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+a {
+  color: dodgerblue;
+}
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+    </style>
+</head>
+<body>
+
+    <form action="/sign_up" method="post">
+      <div class="container">
+        <h1>Login to your Account</h1>
+        <p>Please fill in this form to login to your account</p>
+        <hr>
+        <br><br>
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter User Name" name="name" id="name" required>
+        <br><br>
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+        <br><br>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <br><br>
+        <input type="submit" value="Submit" id="submit"/>
+        <button type="submit" class="registerbtn">LOGIN</button>
+    </div>
+</form>
+
+</body>
+</html>

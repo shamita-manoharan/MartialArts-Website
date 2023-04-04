@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<title>GALLERY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    body{
+        background: rgb(171, 230, 230);
+        background-image: linear-gradient(90deg, rgba(25,30,30,0.15828843744529064) 0%, rgba(27,29,29,0.2983444598542542) 100%);
+    }
+
+    p{
+    text-align: center;
+    color: rgb(155, 11, 11);
+    font-size:25px; 
+    font-family:Arial, Helvetica, sans-serif;
+    }
+
+
+</style>
+<body>
+    <form action="/gallery" method="get">
+
+<div class="w3-content w3-section" style="max-width:700">
+  <p>OUR GALLERY</p>
+
+  <img class="mySlides w3-animate-fading" src="img1.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img2.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img3.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img4.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img5.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img6.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img7.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img8.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img9.png" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="img4.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000);    
+}
+</script>
+</form>
+</body>
+</html>
